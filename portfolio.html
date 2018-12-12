@@ -22,17 +22,26 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <span class="navr-brand mb-0 h1">Bryan Kelley</span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="index.html">About Me <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
-                        <a class="nav-item nav-link" href="contact.html">Contact/Questions</a>
+                <div class="d-flex flex-grow-1">
+                    <span class="navbar-brand mb-0 h1">Bryan Kelley</span>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link m-2 menu-item nav-active">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="portfolio.html" class="nav-link m-2 menu-item">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link m-2 menu-item">Contact/Questions</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -46,40 +55,40 @@
                 </div>
 
                 <!-- <div class="wrapper"> -->
-                    <div class="row">
-                        <div class="box col-sz-4">
-                            <img src="assets/images/boxer_puppy.jpg" class="img-fluid" alt="Boxer Puppy" title="Boxer Puppy"
-                                width="200px">
-                            <p class="banner">Boxer!</p>
-                        </div>
-                        <div class="box col-sz-4">
-                            <img src="assets/images/poodle_puppy.jpg" class="img-fluid" alt="Poodle Puppy" title="Poodle Puppy"
-                                width="200px">
-                            <p class="banner">Poodle!</p>
-                        </div>
-                        <div class="box col-sz-4">
-                            <img src="assets/images/bernese_mountain_puppy.jpg" class="img-fluid" alt="Bernese Mountain Dog Puppy"
-                                title="Bernese Moutain Dog Puppy" width="200px">
-                            <p class="banner">Bernese Mountain Dog!</p>
-                        </div>
+                <div class="row">
+                    <div class="box col-sz-4">
+                        <img src="assets/images/boxer_puppy.jpg" class="img-fluid" alt="Boxer Puppy" title="Boxer Puppy"
+                            width="200px">
+                        <p class="banner">Boxer!</p>
                     </div>
-                    <div class="row">
-                        <div class="box col-sz-4">
-                            <img src="assets/images/french_bulldog_puppy.jpg" class="img-fluid" alt="French Bulldog Puppy"
-                                title="French Bulldog Puppy" width="200px">
-                            <p class="banner">French Bulldog!</p>
-                        </div>
-                        <div class="box col-sz-4">
-                            <img src="assets/images/golden_reteiver_puppy.jpg" class="img-fluid" alt="Golden Retriever Puppy"
-                                title="Golden Retriever Puppy" width="200px">
-                            <p class="banner">Golden Retriever!</p>
-                        </div>
+                    <div class="box col-sz-4">
+                        <img src="assets/images/poodle_puppy.jpg" class="img-fluid" alt="Poodle Puppy" title="Poodle Puppy"
+                            width="200px">
+                        <p class="banner">Poodle!</p>
                     </div>
+                    <div class="box col-sz-4">
+                        <img src="assets/images/bernese_mountain_puppy.jpg" class="img-fluid" alt="Bernese Mountain Dog Puppy"
+                            title="Bernese Moutain Dog Puppy" width="200px">
+                        <p class="banner">Bernese Mountain Dog!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box col-sz-4">
+                        <img src="assets/images/french_bulldog_puppy.jpg" class="img-fluid" alt="French Bulldog Puppy"
+                            title="French Bulldog Puppy" width="200px">
+                        <p class="banner">French Bulldog!</p>
+                    </div>
+                    <div class="box col-sz-4">
+                        <img src="assets/images/golden_reteiver_puppy.jpg" class="img-fluid" alt="Golden Retriever Puppy"
+                            title="Golden Retriever Puppy" width="200px">
+                        <p class="banner">Golden Retriever!</p>
+                    </div>
+                </div>
                 <!-- </div> -->
             </div>
         </div>
 
-        <footer>
+        <footer class="footer text-right">
             <p>Copyright 2018 - All rights reserved &copy;</p>
         </footer>
     </body>
