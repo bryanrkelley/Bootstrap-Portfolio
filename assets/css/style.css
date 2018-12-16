@@ -16,10 +16,19 @@ html {
   
   .container {
     width: auto;
-    /* max-width: 680px; */
     padding: 0 15px;
   }
 
   img.profilePic {
     width: 100%;
+  }
+
+
+  p.banner {
+    bottom: 0;
+    width: 100%;
+    /* width: 170px; */
+    /* padding: 5px 10px 5px 20px; */
+    background-color: #4aaaa5;
+    color: #fff;
   }

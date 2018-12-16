@@ -10,10 +10,8 @@
             crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-            <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -362,41 +360,44 @@
                     </form>
 
                     <div class="text-center text-md-left">
-                        <a class="btn btn-primary" onclick="validateForm()">Send</a>                    
+                        <a class="btn btn-primary" onclick="validateForm()">Send</a>
                     </div>
                     <script>
                         function validateForm() {
-                        var name =  document.getElementById('name').value;
-                        if (name == "") {
-                            document.getElementById('status').innerHTML = "Name cannot be empty";
-                            return false;
-                        }
-                        var email =  document.getElementById('email').value;
-                        if (email == "") {
-                            document.getElementById('status').innerHTML = "Email cannot be empty";
-                            return false;
-                        } else {
-                            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                            if(!re.test(email)){
-                                document.getElementById('status').innerHTML = "Email format invalid";
+                            var name = document.getElementById('name').value;
+                            if (name == "") {
+                                document.getElementById('status').innerHTML = "Name cannot be empty";
                                 return false;
                             }
+                            var email = document.getElementById('email').value;
+                            if (email == "") {
+                                document.getElementById('status').innerHTML = "Email cannot be empty";
+                                return false;
+                            } else {
+                                var re =
+                                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                if (!re.test(email)) {
+                                    document.getElementById('status').innerHTML = "Email format invalid";
+                                    return false;
+                                }
+                            }
+                            var subject = document.getElementById('subject').value;
+                            if (subject == "") {
+                                document.getElementById('status').innerHTML = "Subject cannot be empty";
+                                return false;
+                            }
+                            var message = document.getElementById('message').value;
+                            if (message == "") {
+                                document.getElementById('status').innerHTML = "Message cannot be empty";
+                                return false;
+                            }
+                            document.getElementById('status').innerHTML = "Sending...";
+                            document.getElementById('contact-form').submit();
+
                         }
-                        var subject =  document.getElementById('subject').value;
-                        if (subject == "") {
-                            document.getElementById('status').innerHTML = "Subject cannot be empty";
-                            return false;
-                        }
-                        var message =  document.getElementById('message').value;
-                        if (message == "") {
-                            document.getElementById('status').innerHTML = "Message cannot be empty";
-                            return false;
-                        }
-                        document.getElementById('status').innerHTML = "Sending...";
-                        document.getElementById('contact-form').submit();
-                      
-                        }
-                      </script>
+                    </script>
+
+                    <!-- Trying to create sendable form that directs to my email when send is clicked. -->
                     <div id="status"></div>
                 </div>
 
@@ -423,7 +424,7 @@
         <footer class="footer text-right">
             <p>Copyright 2018 - All rights reserved &copy;</p>
         </footer>
-        
+
         <script src="main.js"></script>
     </body>
 
